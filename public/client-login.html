@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Client Sign In — The B Company</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="auth-page">
+  <div class="auth-card">
+    <div class="brand-row">
+      <img src="/img/logo.svg" alt="">
+      <span>The B Company</span>
+    </div>
+    <h1>Client sign in</h1>
+    <p class="sub">Use the user ID and password provided by The B Company.</p>
+
+    <form id="loginForm">
+      <div class="field">
+        <label for="username">User ID</label>
+        <input type="text" id="username" name="username" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
+      </div>
+      <p class="form-msg error" id="msg"></p>
+      <button class="btn" type="submit" id="submitBtn">Sign in</button>
+    </form>
+
+    <p class="auth-foot">Work at The B Company? <a href="/admin-login.html">Go to admin portal</a></p>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/client-login.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin Dashboard — The B Company</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand-row">
+      <img src="/img/logo.svg" alt="">
+      <span>The B Company</span>
+    </div>
+    <nav id="nav">
+      <button class="nav-link active" data-view="overview">Overview</button>
+      <button class="nav-link" data-view="shipments">Shipments</button>
+      <button class="nav-link" data-view="buyers">Buyers</button>
+      <button class="nav-link" data-view="sellers">Sellers</button>
+      <button class="nav-link" data-view="suppliers">Suppliers</button>
+      <button class="nav-link" data-view="interstate">Interstate Trade</button>
+      <button class="nav-link" data-view="clients">Client Accounts</button>
+      <button class="nav-link" data-view="audit">Login &amp; Audit Log</button>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="who" id="whoAmI"></div>
+      <button class="btn btn-secondary" id="logoutBtn" style="background:transparent;color:var(--parchment);border-color:rgba(241,236,221,0.4);">Sign out</button>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+
+    <section id="view-overview">
+      <h1>Overview</h1>
+      <p class="page-sub">Everything moving through The B Company, at a glance.</p>
+      <div class="stat-grid" id="statGrid"></div>
+      <div class="panel">
+        <div class="panel-head"><h2>Recent login activity</h2></div>
+        <div id="recentAudit"></div>
+      </div>
+    </section>
+
+    <section id="view-shipments" style="display:none">
+      <h1>Shipments</h1>
+      <p class="page-sub">Every shipment record, linked to buyer, seller, supplier and client.</p>
+      <div class="top-bar"><button class="btn" style="width:auto" id="addShipmentBtn">+ New shipment</button></div>
+      <div class="panel"><div id="shipmentsTable"></div></div>
+    </section>
+
+    <section id="view-buyers" style="display:none">
+      <h1>Buyers</h1>
+      <p class="page-sub">Overseas and domestic buyers The B Company exports to.</p>
+      <div class="top-bar"><button class="btn" style="width:auto" id="addBuyerBtn">+ New buyer</button></div>
+      <div class="panel"><div id="buyersTable"></div></div>
+    </section>
+
+    <section id="view-sellers" style="display:none">
+      <h1>Sellers</h1>
+      <p class="page-sub">Sellers The B Company sources and exports goods on behalf of.</p>
+      <div class="top-bar"><button class="btn" style="width:auto" id="addSellerBtn">+ New seller</button></div>
+      <div class="panel"><div id="sellersTable"></div></div>
+    </section>
+
+    <section id="view-suppliers" style="display:none">
+      <h1>Suppliers</h1>
+      <p class="page-sub">Raw material and goods suppliers.</p>
+      <div class="top-bar"><button class="btn" style="width:auto" id="addSupplierBtn">+ New supplier</button></div>
+      <div class="panel"><div id="suppliersTable"></div></div>
+    </section>
+
+    <section id="view-interstate" style="display:none">
+      <h1>Interstate Trade</h1>
+      <p class="page-sub">Domestic, state-to-state movement of goods (GSTIN / E-Way Bill records).</p>
+      <div class="top-bar"><button class="btn" style="width:auto" id="addInterstateBtn">+ New record</button></div>
+      <div class="panel"><div id="interstateTable"></div></div>
+    </section>
+
+    <section id="view-clients" style="display:none">
+      <h1>Client Accounts</h1>
+      <p class="page-sub">Create and manage login access for client companies.</p>
+      <div class="top-bar"><button class="btn" style="width:auto" id="addClientBtn">+ New client account</button></div>
+      <div class="panel"><div id="clientsTable"></div></div>
+    </section>
+
+    <section id="view-audit" style="display:none">
+      <h1>Login &amp; Audit Log</h1>
+      <p class="page-sub">Every sign-in attempt, successful or not, with timestamp and IP — kept for security review.</p>
+      <div class="panel"><div id="auditTable"></div></div>
+    </section>
+
+  </main>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modalBody"></div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/admin-dashboard.js"></script>
+</body>
+</html>

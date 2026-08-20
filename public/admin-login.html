@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin Sign In — The B Company</title>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="auth-page">
+  <div class="auth-card">
+    <div class="brand-row">
+      <img src="/img/logo.svg" alt="">
+      <span>The B Company</span>
+    </div>
+    <h1>Admin sign in</h1>
+    <p class="sub">Internal access only. All sign-in attempts are logged.</p>
+
+    <form id="loginForm">
+      <div class="field">
+        <label for="username">Admin user ID</label>
+        <input type="text" id="username" name="username" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required>
+      </div>
+      <p class="form-msg error" id="msg"></p>
+      <button class="btn" type="submit" id="submitBtn">Sign in</button>
+    </form>
+
+    <p class="auth-foot">Not an admin? <a href="/client-login.html">Go to client portal</a></p>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/admin-login.js"></script>
+</body>
+</html>

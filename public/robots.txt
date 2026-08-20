@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /$
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Disallow: /admin-login.html
+Disallow: /client-login.html
+Disallow: /admin-dashboard.html
+Disallow: /client-dashboard.html
+Disallow: /api/
+
+Sitemap: https://www.thebcompany.example/sitemap.xml
